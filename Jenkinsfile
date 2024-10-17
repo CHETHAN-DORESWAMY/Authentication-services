@@ -50,9 +50,9 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 // git 'https://github.com/sep-2024-trivandrum/authentication-service'
-                bat "docker build -t authentication-image ."
+                bat "docker build -t authentication-sr-image ."
 //                 bat "docker network create -d bridge chethan-network"
-			    bat "docker run --network chethan-network -p 8090:8090 -d --name authentication-sr authentication-image"
+			    bat "docker run --network chethan-network -p 8090:8090 -d --name authentication-sr authentication-sr-image"
 
             }
 
